@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+	<title>Confirm</title>
+</h:head>
+<body>
+	<h1>Confirm</h1>
+	<h:form>
+		<h:panelGrid columns="2">
+			<h:outputLabel value="Name" />
+			<h:outputText value="#{memberRegisteration.member.name}" />
+
+			<h:outputLabel value="Phone" />
+			<h:outputText value="#{memberRegisteration.member.phone}" />
+
+			<h:outputLabel value="Email" />
+			<h:outputText value="#{memberRegisteration.member.email}" />
+
+			<h:outputLabel value="Interest" />
+			<h:outputText value="#{memberRegisteration.member.interest}" />
+
+			<h:panelGroup></h:panelGroup>
+			<h:panelGroup>
+				<h:commandButton action="page2" value="Back" />
+				<h:commandButton action="#{memberRegisteration.save()}" value="Save" />
+			</h:panelGroup>
+		</h:panelGrid>
+	</h:form>
+</body>
+</html>

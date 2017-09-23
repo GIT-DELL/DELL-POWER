@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+	<title>Page 2</title>
+</h:head>
+<body>
+	<h1>Page 2</h1>
+	<h:form>
+		<h:outputLabel value="Please select Interests" />
+		
+		<h:selectOneListbox value="#{memberRegisteration.member.interest}">
+			<f:selectItems value="#{interests}" var="i" itemValue="#{i}" itemLabel="#{i}" />
+		</h:selectOneListbox>
+		
+		<h:commandButton action="registration" value="Back" />
+		<h:commandButton action="page3" value="Next" />
+	</h:form>
+</body>
+</html>

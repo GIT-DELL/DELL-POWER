@@ -1,0 +1,35 @@
+<!DOCTYPE html> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+
+<h:head>
+	<title>Members</title>
+</h:head> 
+<body>
+	<h1>Members</h1>
+	<h:form>
+		<h:commandLink action="registration" value="Register" />
+	</h:form>
+	<h:dataTable value="#{memberRepo.members}" var="m">
+		<h:column>
+			<f:facet name="header">Name</f:facet>
+			#{m.name}
+		</h:column>
+		<h:column>
+			<f:facet name="header">Phone</f:facet>
+			#{m.phone}
+		</h:column>
+		<h:column>
+			<f:facet name="header">Email</f:facet>
+			#{m.email}
+		</h:column>
+		<h:column>
+			<f:facet name="header">Interests</f:facet>
+			#{m.interest}
+		</h:column>
+	</h:dataTable>
+</body> 
+</html>
